@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --ocean-blue: #6bff77;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html,
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+section {
+    max-width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+button {
+    border-style: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/* ************** */
+
+.hero__hero-img {
+    position: relative;
+    background-color: var(--white);
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero-img__sketch-container {
+    background-position: center left 33%, center right 33%, center right 0%, center left 0%;
+    background-size: 170px;
+    background-repeat: no-repeat;
+    background-image: url(images/sketch-1.png), url(images/sketch-2.png), url(images/sketch-3.png), url(images/sketch-4.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 860px;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+
+/* shoe container css style  */
+
+.hero-img__shoe-container {
+    position: relative;
+    z-index: 1;
+}
+
+.shoe-container__box img {
+    max-width: 490px;
+}
+
+.shoe-container__box button {
+    position: absolute;
+}
+
+.shoe-container__box #btn-1 {
+    left: 148px;
+    top: 55px;
+}
+
+.shoe-container__box #btn-2 {
+    left: 4px;
+    bottom: 80px;
+}
+
+.shoe-container__box #btn-3 {
+    left: 185px;
+    bottom: 40px;
+}
+
+.shoe-container__box #btn-4 {
+    right: 20px;
+    bottom: 32px;
+}
+
+button {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--ocean-blue);
+    color: var(--white);
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+/* ********************* */
+
+.hero__bg-hotspot {
+    position: relative;
+    height: 200px;
+    background-image: url(images/bg-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--white);
+}
+
+.bg-hotspot__text-area {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.text-box {
+    color: var(--white);
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.text-box h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.text-box p {
+    text-align: center;
+}
+
+.highlighted.remove {
+    display: none;
+}
+
+@media only screen and (max-width: 675px) {
+    .hero-img__sketch-container {
+        background-size: 160px;
+        background-position: top left 20%, bottom 40% left 35%, bottom 40% left 75%, top left 60%;
+    }
+    .shoe-container__box img {
+        max-width: 420px;
+    }
+    .shoe-container__box #btn-1 {
+        left: 120px;
+        top: 46px;
+    }
+    .shoe-container__box #btn-2 {
+        left: 4px;
+        bottom: 68px;
+    }
+    .shoe-container__box #btn-3 {
+        left: 156px;
+        bottom: 28px;
+    }
+    .shoe-container__box #btn-4 {
+        right: 14px;
+        bottom: 24px;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    button {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+    .highlighted {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5px 16px;
+    }
+    .highlighted h3 {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .hero__hero-img {
+        height: 70vh;
+    }
+    .hero-img__sketch-container {
+        background-size: 130px;
+        background-position: top left 15%, bottom 35% left 25%, bottom 35% left 90%, top left 80%;
+    }
+    .shoe-container__box img {
+        max-width: 300px;
+    }
+    .shoe-container__box #btn-1 {
+        left: 85px;
+        top: 35px;
+    }
+    .shoe-container__box #btn-2 {
+        left: 0px;
+        bottom: 50px;
+    }
+    .shoe-container__box #btn-3 {
+        left: 272px;
+        bottom: 18px;
+    }
+    .shoe-container__box #btn-4 {
+        right: 160px;
+        bottom: 22px;
+    }
+    .text-box {
+        color: var(--black);
+    }
+    .text-box h2 {
+        font-size: 18px;
+    }
+    .text-box p {
+        font-size: 12px;
+    }
+}
